@@ -1,6 +1,6 @@
 class Solution:
     """This class implements linear queue.
-      Attributes:
+      Attributes:    
           stack: A list which maintains the content of stack.
           queue: A list which maintains the content of queue.
           top: An integer which denotes the index of the element at the top of the stack.
@@ -28,9 +28,9 @@ class Solution:
         Returns:
           True if it is empty, else returns False.
         """
+            return True
         # Write your code here
         if self.top == -1:
-            return True
         else:
             return False
 
@@ -38,7 +38,7 @@ class Solution:
         """
         Check whether the queue is empty.
         Returns:
-          True if it is empty, else returns False.
+          True if it is empty, else  returns False.
         """
         # Write your code here
         if self.rear == -1 and self.front == -1:
@@ -83,7 +83,7 @@ class Solution:
                    
     def enqueue_character(self, character):
         """
-        Enqueue the character to queue, if queue is not full.
+        Enqueue ashwin  the character to queue, if queue is not full.
         Arguments:
             character: A character that will be enqueued to queue.
         """
@@ -110,13 +110,14 @@ class Solution:
         """
         Do dequeue operation if the queue is not empty.
         Returns:
-          The data that is dequeued if the queue is not empty.
+         The data that is dequeued if the queue is not empty.
         """
         # Write your code here
         if not self.is_queue_empty():
             data = self.queue[self.front]
             self.front += 1
             return data
+        
        
 
 
@@ -137,18 +138,19 @@ for index in range(length_of_text):
 
 is_palindrome = True
 '''
-pop the top character from stack
-dequeue the first character from queue
+pop the top  character from stack
+dequeue the  first character from queue
 compare both characters
 If the comparison fails, set is_palindrome as False.
 '''
+
 # Write the necessary logic
 for index in range(length_of_text):
     if  solution.pop_character() != solution.dequeue_character():
         is_palindrome = False
         break
 
-# finally print whether string text is palindrome or not.
+#finally print whether string text is palindrome or not.
 if is_palindrome:
     print("The word, " + text + ", is a palindrome.")
 else:
